@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body{
+    margin: 0;
+    padding:0;
+    background: rgb(6, 29, 32);
+    align-items: center;
+
+}
+.draw{
+    position: absolute;
+    left:50%;
+    top: 50%;
+    height:3px;
+    background: rgb(32, 252, 25);
+    transform: translate(-50%,-50%);
+    animation: line 7s  infinite ease-in-out forwards;
+   
+}
+@keyframes line {
+    0%{width:0;}
+    30%{width:40%;}
+    50%{width:40%;}
+     70%{width:0%;}
+ }
+ 
+
+img{
+    position: absolute;
+    width:200px;
+    top:24%;
+    left:49%;
+    transform-origin: center;
+    animation: pencil-away-in 7s  infinite ease-in-out forwards;
+}
+@keyframes pencil-away-in{
+    0%{left:49%;}
+    30%{    left:69%;   transform: rotate(0deg);    top:24%;}
+    50%{    left: 69%;  transform: rotate(180deg);  top:25%;}
+    70%{    left:49%;   top:25%;}
+    80%{    left:49%;   transform: rotate(180deg);  top:25%;}
+    100%{   left :49%;  transform: rotate(360deg);}
+}
+
+
+
